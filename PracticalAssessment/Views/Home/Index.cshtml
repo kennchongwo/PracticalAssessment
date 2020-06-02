@@ -1,0 +1,46 @@
+﻿@model IEnumerable<PracticalAssessment.Data.GeogData>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.iso2)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.year)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Value)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            KE
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.year)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Value)
+                        </td>
+                        <td>
+                            -
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
